@@ -8,7 +8,7 @@ entry_points:
       steps:
         description: Comma-separated list of steps to execute (useful for debugging)
         type: str
-        default: all
+        default: all 
 
       hydra_options:
         description: Other configuration parameters to override
