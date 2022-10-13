@@ -43,6 +43,12 @@ def go(args):
 
     # Filename to export
     filename = "clean_sample.csv"
+
+    # Agregar estas líneas para corregir release
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    df = df[idx].copy()
+
+    # Guardar archivo
     df.to_csv(filename, index=False) # "clean_sample.csv"
     
     # Upload artifact to W&B
